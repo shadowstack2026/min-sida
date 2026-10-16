@@ -1,0 +1,53 @@
+#kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 32px;
+  background-color: #0e0b18;
+  color: #d9d3e6;
+  text-align: center;
+  border-top: 1px solid #2a2140;
+}
+
+#kontakt h2 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#kontakt p {
+  max-width: 45ch;
+  margin: 0 0 32px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Knappen får samma utseende som knappen i hero */
+#kontakt .knapp {
+  margin: 0;
+  border-radius: 10px;
+  background-color: #b8239f;
+  color: #fcf6fa;
+  font-weight: 600;
+}
+
+#kontakt .knapp:hover {
+  background-color: #8f1b7c;
+}
+
+#kontakt .knapp:focus-visible {
+  outline: 3px solid #e05fd4;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  #kontakt {
+    padding: 48px 20px;
+  }
+
+  #kontakt h2 {
+    font-size: 26px;
+  }
+}

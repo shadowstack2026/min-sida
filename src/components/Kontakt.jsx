@@ -1,4 +1,5 @@
 import Knapp from './Knapp';
+import './Kontakt.css';
 
 function Kontakt() {
   return (

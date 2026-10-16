@@ -1,12 +1,13 @@
 .footer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  padding: 48px 20px 32px;
+  gap: 16px 32px;
+  margin-top: auto;                 /* trycker footern längst ner på sidan */
+  padding: 32px;
   background-color: #1d1430;
   color: #fcf6fa;
-  text-align: center;
   border-top: 1px solid rgba(252, 246, 250, 0.1);
 }
 
@@ -14,13 +15,17 @@
   margin: 0;
 }
 
-/* Länkarna */
-.james {
+/* Mejl – vänster */
+.mail {
   order: 1;
+  font-size: 0.95rem;
+}
+
+/* Länkarna – höger, på samma rad som mejlen */
+.james {
+  order: 2;
   display: flex;
-  justify-content: center;
   gap: 32px;
-  align-self: flex-end; 
 }
 
 .james a {
@@ -39,24 +44,28 @@
   outline-offset: 4px;
 }
 
-/* Mejl */
-.mail {
-  order: 1;
-  font-size: 0.95rem;
-  display: flex;
-  justify-content: left;
-  align-self: flex-start; 
-
-  
-}
-
-/* Copyright */
+/* Copyright – egen rad, centrerad längst ner */
 .mail1 {
   order: 3;
   width: 100%;
-  max-width: 600px;
   padding-top: 16px;
+  border-top: 1px solid rgba(252, 246, 250, 0.1);
   font-size: 0.85rem;
-  
-  
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* På mobil hamnar allt centrerat under varandra */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    padding: 32px 20px;
+    text-align: center;
+  }
+
+  .james {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 }
