@@ -6,7 +6,7 @@ function Hem() {
   return (
     <>
       <Header namn="Hej" />
-      <Hero namn="James" />
+      <Hero namn="Hasan" />
       <Projekt />
     </>
   );

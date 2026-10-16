@@ -11,7 +11,7 @@ function Navbar() {
        <Link to="/">Hem</Link>
 <Link to="/om-mig">Om mig</Link>
 <a href="/#projekt">Projekt</a>
-<a href="#kontakt">Kontakt</a>
+<Link to="/kontakt">kontakt</Link>
       </div>
     </nav>
   );
