@@ -1,8 +1,10 @@
 import "./Projekt.css";
 import ProjektKort from "./ProjektKort";
-import bild1 from "../assets/Hero.png";
+import bild1 from "../assets/hero.png";
 import bild2 from "../assets/Hero2.jpg";
 import bild3 from "../assets/Hero3.jpg";
+
+
 
 function Projekt() {
   return (

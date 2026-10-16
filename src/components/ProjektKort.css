@@ -17,6 +17,9 @@
 
 .projekt-info {
   padding: 20px;
+  flex: 1;                               /* fyller resten av kortets höjd */
+  display: flex;
+  flex-direction: column;                /* så att margin-top: auto på knappen fungerar */
 }
 
 .projekt-info h3 {

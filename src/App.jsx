@@ -1,20 +1,21 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header"; 
-import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import Projekt from "./components/Projekt";
-import Kontakt from "./components/Kontakt";
+import Hem from "./pages/Hem";
+import OmMig from "./pages/OmMig";
 
 function App() {
   return (
     <>
-
       <Navbar />
-      <Header namn="Hej" />
-      <Hero namn="Hasan" />
-      <Projekt />
-      <Kontakt />
+
+      {/* Här byts sidan ut beroende på adressen */}
+      <Routes>
+        <Route path="/" element={<Hem />} />
+        <Route path="/om-mig" element={<OmMig />} />
+      </Routes>
+
       <Footer />
     </>
   );

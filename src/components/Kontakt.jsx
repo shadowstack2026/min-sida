@@ -5,7 +5,7 @@ function Kontakt() {
     <section id="kontakt">
       <h2>Kontakta mig</h2>
       <p>Vill du veta mer? Skicka ett mejl så hör jag av mig!</p>
-      <Knapp text="Skicka mejl" lank="hasan.hamzi312@hotmail.com" />
+      <Knapp text="Skicka mejl" lank="mailto:hasan.hamzi312@hotmail.com" />
     </section>
   );
 }
