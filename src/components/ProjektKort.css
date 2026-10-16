@@ -1,0 +1,48 @@
+.projekt-kort {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;                      /* bilden får runda hörn upptill */
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(74, 46, 81, 0.12);
+   display: flex;
+  flex-direction: column;
+}
+
+.projekt-bild {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;                     /* bilden fyller rutan utan att bli utdragen */
+}
+
+.projekt-info {
+  padding: 20px;
+}
+
+.projekt-info h3 {
+  margin: 0 0 8px;
+  color: #261f3a;
+  font-size: 20px;
+}
+
+.projekt-knapp {
+  display: inline-block;
+  margin-top: auto;         
+  align-self: flex-start;    
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #7e2b60;
+  color: #fcf6fa;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 16px
+}
+.projekt-knapp:hover {
+  background-color: #320120;
+}
+
+.projekt-knapp:focus-visible {
+  outline: 3px solid #7e2b60;
+  outline-offset: 4px;
+}
+

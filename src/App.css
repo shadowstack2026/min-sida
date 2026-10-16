@@ -1,0 +1,18 @@
+/* Bakgrunden bakom hela sidan. */
+html {
+  background-color: #07060d;
+}
+
+/* Sidans innehåll, bredd och layout. */
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid #2a2140;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #0e0b18;
+}

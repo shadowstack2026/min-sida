@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #1d1430;
+  color: #fcf6fa;
+}
+
+.header h1 {
+  color: #fcf6fa;
+  font-size: 48px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.header-titel {
+  color: #fcf6fa;
+  font-size: 20px;
+}
