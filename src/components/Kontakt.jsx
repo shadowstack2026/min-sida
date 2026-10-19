@@ -1,12 +1,27 @@
-import Knapp from './Knapp';
 import './Kontakt.css';
 
 function Kontakt() {
   return (
-    <section id="kontakt">
-      <h2>Kontakta mig</h2>
-      <p>Vill du veta mer? Skicka ett mejl så hör jag av mig!</p>
-      <Knapp text="Skicka mejl" lank="mailto:hasan.hamzi312@hotmail.com" />
+    <section className="kontakt" id="kontakt">
+      {/* Vänster kolumn: text */}
+      <div className="kontakt-info">
+        <h2>Kontakta mig</h2>
+        <p>Har du en fråga? Skriv ett meddelande!</p>
+      </div>
+
+      {/* Höger kolumn: formuläret */}
+      <form className="kontakt-form">
+        <label htmlFor="namn">Namn</label>
+        <input type="text" id="namn" placeholder="Ditt namn" />
+
+        <label htmlFor="epost">E-post</label>
+        <input type="email" id="epost" placeholder="namn@exempel.se" />
+
+        <label htmlFor="meddelande">Meddelande</label>
+        <textarea id="meddelande" rows="5" />
+
+        <button type="submit">Skicka</button>
+      </form>
     </section>
   );
 }
