@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projekt from "../components/Projekt";
+import GitHubRepon from "../components/GitHubRepon";
 
 
 function Hem() {
@@ -9,6 +10,7 @@ function Hem() {
       <Header namn="Hej" />
       <Hero namn="Hasan" />
       <Projekt />
+      <GitHubRepon />
     </>
   );
 }
