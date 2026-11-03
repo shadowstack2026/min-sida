@@ -49,3 +49,21 @@
   outline-offset: 4px;
 }
 
+
+.projekt-taggar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 16px;
+  list-style: none;
+}
+
+.projekt-taggar li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: #ede9f6;
+  color: #7e2b60;
+  font-size: 14px;
+  font-weight: 600;
+}
