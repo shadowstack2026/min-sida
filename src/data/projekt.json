@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titel": "Min portfoliosida",
+    "text": "Sidan du tittar på nu. Byggd med React och CSS.",
+    "bild": "hero.png",
+    "lank": "https://www.google.se",
+    "teknik": ["React", "CSS", "Git"]
+  },
+  {
+    "id": 2,
+    "titel": "Projekt 2",
+    "text": "Kommer snart.",
+    "bild": "Hero2.jpg",
+    "lank": "https://www.google.se",
+    "teknik": ["React", "useState"]
+  },
+  {
+    "id": 3,
+    "titel": "Projekt 3",
+    "text": "Kommer snart.",
+    "bild": "Hero3.jpg",
+    "lank": "https://hamzozi7.github.io/hasan.hamzi/",
+    "teknik": ["HTML", "CSS"]
+  },
+  {
+    "id": 4,
+    "titel": "Räknaren",
+    "text": "En enkel räknare byggd med useState.",
+    "bild": "Hero2.jpg",
+    "lank": "#",
+    "teknik": ["React", "useState"]
+  }
+]
