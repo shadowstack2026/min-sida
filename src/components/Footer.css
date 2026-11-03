@@ -2,10 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   gap: 16px 32px;
   margin-top: auto;                 /* trycker footern längst ner på sidan */
-  padding: 32px;
+  padding: 32px 20px;
+  text-align: center;
   background-color: #1d1430;
   color: #fcf6fa;
   border-top: 1px solid rgba(252, 246, 250, 0.1);
@@ -25,12 +27,16 @@
 .james {
   order: 2;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .james a {
   color: #fcf6fa;
   text-decoration: none;            /* tar bort understrykningen */
+  display: inline-block;
+  padding: 10px 4px;
   transition: color 0.2s ease;
 }
 
@@ -55,17 +61,15 @@
   opacity: 0.8;
 }
 
-/* På mobil hamnar allt centrerat under varandra */
-@media (max-width: 600px) {
+/* På större skärm: mejl till vänster, länkar till höger */
+@media (min-width: 601px) {
   .footer {
-    flex-direction: column;
-    padding: 32px 20px;
-    text-align: center;
+    flex-direction: row;
+    padding: 32px;
+    text-align: left;
   }
 
   .james {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 32px;
   }
 }

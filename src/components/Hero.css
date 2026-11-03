@@ -1,9 +1,9 @@
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;      /* mobil: bild under text */
   align-items: center;
-  gap: 40px;
-  padding: 64px 32px 72px;
+  gap: 32px;
+  padding: 40px 20px 48px;
   text-align: left;
   background-color: #0e0b18;
   color: #d9d3e6;
@@ -32,7 +32,7 @@
   max-width: 20ch;
   margin: 0 0 24px;
   color: #ffffff;
-  font-size: 40px;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -64,15 +64,10 @@
   outline-offset: 4px;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 40px 20px 48px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 64px 32px 72px;
   }
 }

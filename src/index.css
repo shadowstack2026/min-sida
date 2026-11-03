@@ -7,9 +7,15 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px;
   }
 }
 
@@ -25,22 +31,16 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: -0.03em;
+  margin: 20px 0;
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
 }
 p {
   margin: 0;
@@ -59,4 +59,9 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: #2a2140;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

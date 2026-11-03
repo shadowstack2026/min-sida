@@ -1,9 +1,9 @@
 .om-mig {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* bild till vänster, text till höger */
+  grid-template-columns: 1fr;       /* mobil: text under bilden */
   align-items: center;              /* texten hamnar mitt för bilden */
-  gap: 40px;
-  padding: 64px 32px;
+  gap: 32px;
+  padding: 40px 20px;
   text-align: left;
   background-color: #ffffff;
 }
@@ -51,19 +51,14 @@
   font-weight: 600;
 }
 
-/* På mobil hamnar texten under bilden */
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .om-mig {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;   /* bild till vänster, text till höger */
+    gap: 40px;
+    padding: 64px 32px;
   }
 }
 
-@media (max-width: 600px) {
-  .om-mig {
-    padding: 40px 20px;
-  }
-}
 .las-mer-knapp {
   margin-bottom: 24px;
   padding: 10px 20px;

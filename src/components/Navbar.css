@@ -1,8 +1,12 @@
+/* Mobil först: grundstilen är mobilmenyn */
 .navbar {
-  display: flex;                    /* lägger logo och länkar på en rad */
-  justify-content: space-between;   /* logo till vänster, länkar till höger */
+  position: sticky;                 /* följer med när man scrollar */
+  top: 0;                           /* fastnar högst upp */
+  z-index: 10;                      /* ligger ovanpå innehållet */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 12px 20px;
   background-color: #120e1e;
 }
 
@@ -12,12 +16,26 @@
   font-weight: bold;
 }
 
+/* Länkarna göms i en liten ruta under hamburgarknappen */
 .lankar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  flex-direction: column;
+  min-width: 180px;
+  padding: 8px 0;
+  border-radius: 0 0 8px 8px;
+  background-color: #120e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lankar.oppen {
   display: flex;
-  gap: 24px;                        /* avstånd mellan länkarna */
 }
 
 .lankar a {
+  padding: 12px 20px;
   color: #fcf6fa;
   text-decoration: none;            /* tar bort understrykningen */
 }
@@ -35,4 +53,47 @@
 .lankar a.active {
   font-weight: 700;
   border-bottom: 2px solid currentColor;
+}
+
+.hamburgare {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.hamburgare:focus-visible {
+  outline: 2px solid #f0a35e;
+}
+
+/* På större skärm: länkarna på en rad och ingen hamburgarknapp */
+@media (min-width: 701px) {
+  .navbar {
+    padding: 16px 32px;
+  }
+
+  .hamburgare {
+    display: none;
+  }
+
+  .lankar,
+  .lankar.oppen {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 24px;
+    min-width: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .lankar a {
+    padding: 10px 4px;
+  }
 }
