@@ -1,0 +1,27 @@
+.raknare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+}
+
+.raknare button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;          /* runda knappar */
+  background-color: #7e2b60;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.antal {
+  min-width: 3ch;               /* siffran hoppar inte när den blir tvåsiffrig */
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.positiv { color: #1f7a4d; } /* grön när antal är över 0 */

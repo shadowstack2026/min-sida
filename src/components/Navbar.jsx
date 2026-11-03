@@ -1,5 +1,5 @@
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -8,10 +8,10 @@ function Navbar() {
     <nav className="navbar">
       <span className="logo">Tech School</span>
       <div className="lankar">
-       <Link to="/">Hem</Link>
-<Link to="/om-mig">Om mig</Link>
-<a href="/#projekt">Projekt</a>
-<Link to="/kontakt">kontakt</Link>
+       <NavLink to="/" end>Hem</NavLink>
+<NavLink to="/om-mig">Om mig</NavLink>
+<NavLink to="/projekt">Projekt</NavLink>
+<NavLink to="/kontakt">kontakt</NavLink>
       </div>
     </nav>
   );

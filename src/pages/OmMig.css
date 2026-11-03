@@ -64,3 +64,19 @@
     padding: 40px 20px;
   }
 }
+.las-mer-knapp {
+  margin-bottom: 24px;
+  padding: 10px 20px;
+  border: 2px solid #7e2b60;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #7e2b60;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.las-mer-knapp:hover {
+  background-color: #7e2b60;
+  color: #ffffff;
+}

@@ -1,4 +1,5 @@
 import "./Hero.css";
+import { Link } from "react-router-dom";
 import heroBild from "../assets/Hero1.jpg";
 
 
@@ -12,9 +13,9 @@ function Hero({ namn }) {
           Välkommen till min portfolio. Här delar jag det jag lär mig och skapar
           med HTML, CSS och React.
         </p>
-        <a className="hero-knapp" href="#valkommen">
-          Läs vidare
-        </a>
+        <Link className="hero-knapp" to="/projekt">
+          Se mina projekt
+        </Link>
       </div>
       <img
         className="hero-bild"

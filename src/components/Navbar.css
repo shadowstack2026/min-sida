@@ -31,3 +31,8 @@
   outline: 2px solid #f0a35e;
   outline-offset: 4px;
 }
+
+.lankar a.active {
+  font-weight: 700;
+  border-bottom: 2px solid currentColor;
+}
