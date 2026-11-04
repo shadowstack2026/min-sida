@@ -1,0 +1,15 @@
+.todo {
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.todo form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo input {
+  flex: 1;
+  padding: 0.5rem;
+}

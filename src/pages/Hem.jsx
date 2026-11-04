@@ -5,6 +5,8 @@ import GitHubRepon from "../components/GitHubRepon";
 import Vader from "../components/Vader";
 import { NAME } from "../data/Settings";
 import { fornamn } from "../utils/text";
+import Todo from "../components/Todo";
+
 
 
 function Hem() {
@@ -15,6 +17,7 @@ function Hem() {
       <Projekt />
       <GitHubRepon />
       <Vader />
+      <Todo />
     </>
   );
 }
