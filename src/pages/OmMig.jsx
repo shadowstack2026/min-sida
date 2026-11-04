@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./OmMig.css";
 import bild4 from "../assets/avatar.jpg";
+import { lasTid } from "../utils/text";
+
+const INTRO = `Jag heter Hasan och går på Tech School, där jag lär mig att bygga för
+webben. Den här sidan är mitt första projekt i React.`;
+const MER = `Här lär jag mig att bygga sidor med komponenter och att spara min
+kod på GitHub.`;
 
 function OmMig() {
   // false = den extra texten är dold från början
@@ -16,18 +22,11 @@ function OmMig() {
 
       <div className="om-mig-innehall">
         <h2>Om mig</h2>
-        <p className="om-mig-text">
-          Jag heter Hasan och går på Tech School, där jag lär mig att bygga för
-          webben. Den här sidan är mitt första projekt i React.
-        </p>
+        <p className="om-mig-lasTid">{lasTid(`${INTRO} ${MER}`)}</p>
+        <p className="om-mig-text">{INTRO}</p>
 
         {/* Syns bara när visaMer är true */}
-        {visaMer && (
-          <p className="om-mig-text">
-            Här lär jag mig att bygga sidor med komponenter och att spara min
-            kod på GitHub.
-          </p>
-        )}
+        {visaMer && <p className="om-mig-text">{MER}</p>}
 
         <button
           className="las-mer-knapp"

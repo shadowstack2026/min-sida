@@ -28,6 +28,12 @@ export const antalProjekt = (antal, totalt) =>
 // "Hasan Hamzi" blir "Hasan"
 export const fornamn = (namn) => namn.split(" ")[0];
 
+// Ger "Lästid: 2 min" (200 ord per minut, minst 1 min)
+export const lasTid = (text) => {
+  const ord = text.trim().split(/\s+/).filter(Boolean).length;
+  return `Lästid: ${Math.max(1, Math.ceil(ord / 200))} min`;
+};
+
 // "Hasan Hamzi" blir "HH"
 export const initialer = (namn) =>
   namn

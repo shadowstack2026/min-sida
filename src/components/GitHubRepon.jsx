@@ -2,10 +2,9 @@ import "./GitHubRepon.css";
 import { useState, useEffect } from "react";
 import { snyggtDatum, kortText } from "../utils/text";
 
-// Byt till ditt eget GitHub-användarnamn
-const ANVANDARE = "shadowstack2026";
-const API_URL =
-  "https://api.github.com/users/" + ANVANDARE + "/repos?sort=updated&per_page=6";
+import { GITHUB_USER } from "../data/Settings";
+
+const API_URL = `https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=6`;
 
 function GitHubRepon() {
   // Tre lägen: laddar, fel och klart
