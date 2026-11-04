@@ -1,0 +1,38 @@
+.vader {
+  padding: 40px 20px;
+  background-color: #0e0b18;
+  color: #d9d3e6;
+}
+
+.vader-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.vader-kort {
+  padding: 20px;
+  border: 1px solid #2a2140;
+  border-radius: 8px;
+  background-color: #17122a;
+}
+
+.vader-kort h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.vader-temp {
+  margin-bottom: 4px;
+  color: #e05fd4;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  .vader {
+    padding: 64px 32px;
+  }
+}

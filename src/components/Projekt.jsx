@@ -7,6 +7,7 @@
 import "./Projekt.css";
 import { useState } from "react";
 import ProjektKort from "./ProjektKort";
+import { antalProjekt } from "../utils/text";
 // En JSON-fil importeras precis som en JS-fil – Vite gör om den till en vanlig array
 import projektLista from "../data/projekt.json";
 // En bild importeras som en variabel – Vite ger oss rätt sökväg till filen
@@ -67,7 +68,7 @@ function Projekt() {
       </label>
 
       <p className="projekt-antal">
-        Visar {synligaProjekt.length} av {projektLista.length} projekt
+        {antalProjekt(synligaProjekt.length, projektLista.length)}
       </p>
 
       {/* Tom lista? Visa ett meddelande istället för ingenting */}

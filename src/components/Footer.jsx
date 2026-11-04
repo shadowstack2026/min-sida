@@ -1,13 +1,13 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { copyright } from "../utils/text";
 
 function Footer() {
-  const år = new Date().getFullYear(); 
 
   return (
     <footer className="footer">
       <p className="mail"> hasan.hamzi312@hotmail.com</p>
-      <p className="mail1">© {år} Hasan Hamzi</p>
+      <p className="mail1">{copyright("Hasan Hamzi")}</p>
        <div className="james">
       <Link to="/">Hem</Link>
 <Link to="/om-mig">Om mig</Link>

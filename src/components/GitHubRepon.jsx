@@ -1,5 +1,6 @@
 import "./GitHubRepon.css";
 import { useState, useEffect } from "react";
+import { snyggtDatum, kortText } from "../utils/text";
 
 // Byt till ditt eget GitHub-användarnamn
 const ANVANDARE = "shadowstack2026";
@@ -46,7 +47,8 @@ function GitHubRepon() {
               <a href={r.html_url}>{r.name}</a>
             </h3>
             {/* || = "eller": har repot ingen beskrivning används texten efter */}
-            <p>{r.description || "Ingen beskrivning än."}</p>
+            <p>{kortText(r.description || "Ingen beskrivning än.", 100)}</p>
+            <p>Uppdaterad {snyggtDatum(r.updated_at)}</p>
             {/* && = visa bara språket om det finns */}
             {r.language && <span className="github-sprak">{r.language}</span>}
           </li>
