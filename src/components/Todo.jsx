@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TodoItem from "./TodoItem";
 import "./Todo.css";
 
 function Todo() {
@@ -12,6 +13,10 @@ function Todo() {
     }
     setTodos([...todos, { id: Date.now(), text: text }]);
     setText("");
+  }
+
+  function removeTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
   }
 
 return (
@@ -33,7 +38,11 @@ return (
       ) : (
         <ul>
           {todos.map((todo) => (
-            <li key={todo.id}>{todo.text}</li>
+            <TodoItem
+              key={todo.id}
+              text={todo.text}
+              onRemove={() => removeTodo(todo.id)}
+            />
           ))}
         </ul>
       )}
