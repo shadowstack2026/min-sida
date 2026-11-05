@@ -103,6 +103,7 @@ function Projekt() {
               // key = Reacts "namnbricka" så den kan hålla isär korten.
               // Den ska vara unik och sitta på det yttersta elementet i map:en.
               key={p.id}
+              id={p.id}
               titel={p.titel}
               text={p.text}
               bild={bilder[p.bild]}
