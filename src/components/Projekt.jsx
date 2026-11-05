@@ -30,6 +30,7 @@ function Projekt() {
   // Vilken filterknapp är vald, och vad står i sökrutan?
   const [vald, setVald] = useState("Alla");
   const [sok, setSok] = useState("");
+  const [sortering, setSortering] = useState("standard");
 
   // .filter() går igenom listan och behåller bara de projekt där vi svarar true.
   // Den nya listan räknas ut på nytt varje gång state ändras – den behöver inget eget state.
@@ -38,6 +39,14 @@ function Projekt() {
     const rattSok = p.titel.toLowerCase().includes(sok.toLowerCase());
     return rattTeknik && rattSok; // båda måste stämma
   });
+
+  const sorteradeProjekt = [...synligaProjekt];
+
+  if (sortering === "titel") {
+    sorteradeProjekt.sort((a, b) => a.titel.localeCompare(b.titel, "sv"));
+  } else if (sortering === "tekniker") {
+    sorteradeProjekt.sort((a, b) => b.teknik.length - a.teknik.length);
+  }
 
   return (
     <section className="projekt" id="projekt">
@@ -67,6 +76,15 @@ function Projekt() {
         />
       </label>
 
+      <label className="projekt-sok">
+        Sortera
+        <select value={sortering} onChange={(e) => setSortering(e.target.value)}>
+          <option value="standard">Standard</option>
+          <option value="titel">Titel (A–Ö)</option>
+          <option value="tekniker">Flest tekniker först</option>
+        </select>
+      </label>
+
       <p className="projekt-antal">
         {antalProjekt(synligaProjekt.length, projektLista.length)}
       </p>
@@ -80,7 +98,7 @@ function Projekt() {
               Läs det som: "för varje projekt p – gör ett kort med p:s titel, text..."
               Vanliga parenteser ( ) efter => returnerar JSX:en automatiskt.
               Med måsvingar { } måste man skriva return – annars syns inga kort! */}
-          {synligaProjekt.map((p) => (
+          {sorteradeProjekt.map((p) => (
             <ProjektKort
               // key = Reacts "namnbricka" så den kan hålla isär korten.
               // Den ska vara unik och sitta på det yttersta elementet i map:en.

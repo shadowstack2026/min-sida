@@ -7,6 +7,8 @@ import OmMig from "./pages/OmMig";
 import Kontakt from "./components/Kontakt";
 import ProjektSida from "./pages/ProjektSida";
 import EjHittad from "./pages/EjHittad";
+import ProjektDetalj from "./pages/ProjektDetalj";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/projekt" element={<ProjektSida />} />
         <Route path="*" element={<EjHittad />} />
+        <Route path="/projekt/:id" element={<ProjektDetalj />} />
       </Routes>
 
       <Footer />
